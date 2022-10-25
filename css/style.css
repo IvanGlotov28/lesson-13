@@ -1,0 +1,388 @@
+
+
+.appearance {
+    margin: 40px;
+    opacity: 0;
+    animation:appearance 3s linear 1 forwards normal ;
+}
+
+@keyframes appearance {
+
+    0%{opacity: 0;
+        
+    }
+
+    100%{
+        opacity: 1;
+     
+    }
+    
+}
+.tytle {
+    font-size: 24px;
+    margin-bottom: 14px;
+    
+  
+}
+.text {
+    max-width: 500px;
+}
+
+.wrapper {
+}
+.section {
+    transform: translate(0px, -7000px) ;
+    background-color: grey;
+    margin: 100px;
+}
+.section__item{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(33, 177, 146);
+    margin: 50px;
+    padding: 60px;
+    font-size: 40px;
+    color: white;
+}
+
+
+.section__item--1 {
+    transition-duration: 4s;
+    transition-property:background-color ;
+    transition-delay: 0.2s;
+    transition-timing-function: linear; 
+
+}
+
+
+.section__item--1:hover{
+    
+    width: 500px;
+    height: 500px;
+    background-color: rgb(33, 231, 122);
+}
+
+.section__item--2 {
+    transition: all, 0.1s,linear, 0.1s;
+}
+
+.section__item--2:hover{
+    transform: rotate(90deg);
+}
+
+.section__item--3 {
+    transition: width 0.8s ease 0s, height 0.5s ease-in 0.8s, background-color 0.9s linear 1.3s, border-radius 1s linear 2.2s;
+}
+
+.section__item--3:hover{
+    width: 400px;
+    height: 500px;
+    background-color: black;
+    border-radius: 50%;
+}
+.section__item--4 {
+    padding: 10px;
+    animation-name: rotate;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+.section__link {
+    margin: 50px;
+    font-size: 18px;
+    color: white;
+    transform: translate(0, -20px);
+    transition: all 0.5s linear;
+}
+
+.section__link::after{
+    content:"";
+    width: 0px;
+    height: 5px;
+    background-color: rgb(138, 179, 25);
+    position: absolute;
+    top: 16px;
+    left:-1px;
+    border-radius: 5px;
+    transition: width 1s ease , background-color 5s linear  1s, font-size 2s linear  ;
+}
+.section__link:active::after{
+    width: 82px;
+    background-color: red;
+    margin-top: 8px;
+
+}
+
+.section__link:hover {
+    font-size: 25px;
+}
+
+
+@keyframes rotate {
+    0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+
+}
+
+.section__item--5 {
+        animation: transform 5s ease-in-out  infinite ;
+ 
+}
+
+.section__item--5:hover{
+    animation-play-state :paused;
+}
+
+
+
+@keyframes transform {
+
+    0% {
+		transform: skew(0deg, 0deg);
+        
+	}
+    50%{transform: skew(360deg, 0deg);
+
+    }
+	100% {
+		transform: skew(0deg, 0deg);
+	}
+    
+}
+.section__item--6 {
+  opacity: 0;  
+  transition: opacity 3s linear 1s, background-color 1s linear 4s;
+}
+
+.section__item--6:hover{
+    opacity: 1;
+    background-color: darkgreen;
+}
+
+
+.lawn {
+    transform: translate(0px, 200px);
+    width: 1900px;
+}
+.sky {
+    
+    height: 500px;
+    background-image: linear-gradient(182.99deg, #0C61AF 2.48%, #F3F3F3 123.75%);
+ 
+
+}
+
+
+.cloud {
+     transform: scale(0.2) ;
+     position: relative;
+     top: -4100px;
+     left: 500px;
+}
+.cloud--1 {
+ left: 600px;
+
+}
+.cloud--2 {
+        top: -5400px;
+        left: -750px;
+}
+.cloud--3 {
+    top: -6700px;
+    left: -350px;
+  
+}
+
+
+.rain {
+    transform: scale(0.2);
+    position: relative;
+   
+    transition: top 10s linear 0.1s, opacity 0.5s linear ;
+    opacity: 0;
+
+  
+    top: -7550px;
+    left: -240px; 
+
+}
+
+
+
+.cloud--3:hover + .rain{
+            top: 200px;  
+            opacity: 1;
+}
+
+
+.grass {
+
+    height: 300px;
+    background-color: rgb(72, 202, 40);
+}
+.tree {
+    position: relative;
+    top: -100px;
+}
+
+.tree img{
+    transform: scale(0.3);
+    position: relative;
+    top: -1450px;
+}
+
+
+
+.basket{
+    width: 150px;
+    height: 70px;
+    background-color: brown;
+    position: relative;
+    top: -2450px;
+    left: 700px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    border: 2px solid black;
+    transition: all 0.2s linear;
+
+}
+
+.basket:hover{
+   transform: rotate(15deg); 
+}
+
+.sun {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: rgb(210, 210, 26);
+    position: relative;
+    top: -3350px;
+    left: 100px;
+   
+    animation: sunny  4s linear 0.1s infinite alternate ;
+}
+
+@keyframes sunny {
+    0%{
+        transform: translate(0px)
+
+    }
+
+    100%{
+        transform: translate(450px) ;
+    }
+    
+}
+
+
+
+.apple {
+    background-color: red;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: relative;
+    top:-2700px;
+    left: 1000px;
+  
+}
+
+.apples {
+    animation: apples 0.8s linear;
+}
+
+@keyframes apples{
+    0% {
+		transform: translate(0,0);
+	}
+	100% {
+		transform: translate(0px, 500px);
+	}
+}
+
+.apples--1 {
+    animation: apples1 0.8s linear 0.3s ;
+}
+
+
+
+@keyframes apples1{
+    0% {
+		transform: translate(0,0);
+	}
+    100% {
+		transform: translate(0px, 500px);
+	}
+
+}
+
+
+
+.basket:hover + .apples  {
+    animation-play-state: paused;
+}
+
+
+.apple--1 {
+    transform: translate(100px, -120px);
+
+    
+
+}
+
+
+
+.apple--2 {
+    transform: translate(130px, -220px);
+   
+
+}
+
+
+
+
+
+.apple--3 {
+    transform: translate(-190px, -120px);
+  
+}
+.apple--4 {
+    transform: translate(-100px, -220px);
+    
+  
+}
+.apple--5 {
+    transform: translate(-80px, -120px);
+    
+}
+.apple--6 {
+    transform: translate(300px, -220px);
+   
+}
+.apple--7 {
+    transform: translate(-150px, -400px);
+    
+}
+.apple--8 {
+    transform: translate(100px, -520px);
+    
+}
+.apple--9 {
+    transform: translate(-80px, -520px);
+    
+}
+.apple--10 {
+    transform: translate(-60px, -480px);
+    
+}
+.apple--11 {
+    transform: translate(300px, -520px);
+    
+}
+
